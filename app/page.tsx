@@ -7,11 +7,23 @@ import QuickLinks from '@/components/QuickLinks';
 import NewsCards from '@/components/NewsCards';
 import Learning from '@/components/Learning';
 import Wellbeing from '@/components/Wellbeing';
+import HERRRbyVideo from '@/components/HERRRbyVideo';
 import Footer from '@/components/Footer';
+
 export default function Home() {
   return (
     <main>
-      <Navigation /><Hero /><StatsStrip /><HERRRby /><PERCI /><QuickLinks /><NewsCards /><Learning /><Wellbeing /><Footer />
+      <Navigation />
+      <Hero />
+      <StatsStrip />
+      <HERRRby />
+      <PERCI />
+      <QuickLinks />
+      <NewsCards />
+      <Learning />
+      <Wellbeing />
+      <HERRRbyVideo />
+      <Footer />
     </main>
   );
 }
