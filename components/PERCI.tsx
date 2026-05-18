@@ -1,38 +1,17 @@
-import React from 'react';
-
-export default function Learning() {
+export default function PERCI() {
+  const d = [{icon:'💪',title:'Perseverance',description:'We keep going when things get tough.'},{icon:'⭐',title:'Excellence',description:'We strive to do our best in all we do.'},{icon:'🚀',title:'Risk-taking',description:'We are brave enough to try new things.'},{icon:'🔍',title:'Curiosity',description:'We wonder, explore, and ask why.'},{icon:'🎯',title:'Initiative',description:'We take action and lead our own learning.'}];
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left - Image */}
-          <div className="bg-gradient-to-br from-cyan to-blue-400 h-96 rounded-lg flex items-center justify-center text-white font-serif text-2xl order-last md:order-first">
-            <div className="text-center">
-              <p className="text-5xl mb-2">📚</p>
-              <p>Learning image placeholder</p>
-            </div>
+    <section style={{backgroundColor:'#f9fafb',padding:'5rem 0'}}>
+      <div style={{maxWidth:'1280px',margin:'0 auto',padding:'0 1.5rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'3rem',alignItems:'center'}}>
+          <div>
+            <p style={{color:'#FF6B35',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'0.5rem'}}>How We Learn</p>
+            <h2 style={{color:'#003D5C',fontFamily:'Cormorant Garamond, serif',marginBottom:'1rem'}}>PERCI Learners</h2>
+            <p style={{color:'#374151',fontSize:'1.125rem',lineHeight:1.7,marginBottom:'1rem'}}>At Gardenvale, we nurture five key dispositions that transform our students into thoughtful, resilient, and confident learners.</p>
+            <p style={{color:'#6b7280',lineHeight:1.7}}>These dispositions work alongside HERRRby to create a learning community where every student can thrive.</p>
           </div>
-
-          {/* Right - Text */}
-          <div className="order-first md:order-last">
-            <p className="text-orange text-sm font-semibold uppercase tracking-wider mb-2">Our Approach</p>
-            <h2 className="text-navy mb-6">Learning at Gardenvale</h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
-              We provide engaging, inquiry-based learning experiences that challenge our students to think critically, collaborate, and discover their passions.
-            </p>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-              From literacy and numeracy to specialist programs in visual arts, music, sport, and digital technologies, every student finds their pathway to excellence.
-            </p>
-            <div className="space-y-2">
-              <p className="text-gray-700 text-base"><strong>Two Campuses:</strong></p>
-              <ul className="text-gray-700 text-base space-y-1 ml-4">
-                <li>✓ Junior Campus (Prep–Year 2): Play-based and discovery learning</li>
-                <li>✓ Senior Campus (Year 3–6): Deeper inquiry and specialisation</li>
-              </ul>
-            </div>
-            <a href="#" className="text-orange font-semibold hover:text-orange-600 transition inline-flex items-center gap-2 mt-6">
-              Explore our learning →
-            </a>
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
+            {d.map((x,i) => <div key={i} style={{backgroundColor:'white',borderRadius:'8px',padding:'1.5rem',border:'1px solid #e5e7eb'}}><div style={{fontSize:'1.875rem',marginBottom:'0.75rem'}}>{x.icon}</div><h3 style={{color:'#003D5C',fontFamily:'Cormorant Garamond, serif',fontSize:'1.125rem',marginBottom:'0.5rem'}}>{x.title}</h3><p style={{color:'#6b7280',fontSize:'0.75rem',lineHeight:1.6}}>{x.description}</p></div>)}
           </div>
         </div>
       </div>

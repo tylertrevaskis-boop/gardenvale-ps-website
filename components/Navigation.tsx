@@ -1,62 +1,20 @@
-import React from 'react';
-
-export default function PERCI() {
-  const dispositions = [
-    { 
-      icon: '💪',
-      title: 'Perseverance', 
-      description: 'We keep going when things get tough, learning from setbacks and trying again with determination.'
-    },
-    { 
-      icon: '⭐',
-      title: 'Excellence', 
-      description: 'We strive to do our best in all we do, taking pride in the quality of our learning and effort.'
-    },
-    { 
-      icon: '🚀',
-      title: 'Risk-taking', 
-      description: 'We are brave enough to try new things, ask questions, and step outside our comfort zone.'
-    },
-    { 
-      icon: '🔍',
-      title: 'Curiosity', 
-      description: 'We wonder, explore, and ask "why?" — fueling our love of learning and discovery.'
-    },
-    { 
-      icon: '🎯',
-      title: 'Initiative', 
-      description: 'We take action, solve problems, and lead our own learning journey with confidence.'
-    },
-  ];
-
+export default function Navigation() {
   return (
-    <section className="bg-gray-50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-          {/* Left - Text */}
-          <div>
-            <p className="text-orange text-sm font-semibold uppercase tracking-wider mb-2">How We Learn</p>
-            <h2 className="text-navy mb-4">PERCI Learners</h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-              At Gardenvale, we nurture five key dispositions that transform our students into thoughtful, resilient, and confident learners. PERCI guides how we approach learning, tackle challenges, and grow together.
-            </p>
-            <p className="text-gray-600 text-base">
-              These dispositions work alongside HERRRby to create a learning community where every student can thrive, whether they're in our Senior or Junior campus.
-            </p>
-          </div>
-
-          {/* Right - Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {dispositions.map((disp, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-6 border border-gray-200 hover:border-orange hover:shadow-lg transition">
-                <div className="text-3xl mb-3">{disp.icon}</div>
-                <h3 className="text-navy font-serif text-lg mb-2">{disp.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{disp.description}</p>
-              </div>
-            ))}
-          </div>
+    <nav style={{position:'fixed',width:'100%',top:0,backgroundColor:'white',borderBottom:'1px solid #e5e7eb',zIndex:50,boxShadow:'0 1px 3px rgba(0,0,0,0.1)'}}>
+      <div style={{maxWidth:'1280px',margin:'0 auto',padding:'1rem 1.5rem',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+        <div style={{display:'flex',alignItems:'center',gap:'0.5rem'}}>
+          <div style={{width:'40px',height:'40px',backgroundColor:'#003D5C',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontFamily:'serif',fontSize:'1.125rem',fontWeight:'bold'}}>G</div>
+          <span style={{fontFamily:'Cormorant Garamond, serif',fontWeight:'bold',color:'#003D5C',fontSize:'1.125rem'}}>GARDENVALE PRIMARY</span>
+        </div>
+        <div style={{display:'flex',alignItems:'center',gap:'2rem'}}>
+          <a href="#" style={{color:'#374151',textDecoration:'none',fontWeight:500,fontSize:'0.875rem'}}>About</a>
+          <a href="#" style={{color:'#374151',textDecoration:'none',fontWeight:500,fontSize:'0.875rem'}}>Learning</a>
+          <a href="#" style={{color:'#374151',textDecoration:'none',fontWeight:500,fontSize:'0.875rem'}}>Wellbeing</a>
+          <a href="#" style={{color:'#374151',textDecoration:'none',fontWeight:500,fontSize:'0.875rem'}}>News</a>
+          <a href="#" style={{color:'#374151',textDecoration:'none',fontWeight:500,fontSize:'0.875rem'}}>Contact</a>
+          <button style={{backgroundColor:'#FF6B35',color:'white',padding:'0.5rem 1.5rem',borderRadius:'4px',border:'none',fontWeight:600,cursor:'pointer'}}>Enrol now</button>
         </div>
       </div>
-    </section>
+    </nav>
   );
 }

@@ -1,28 +1,18 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Gardenvale Primary School | Challenge. Engage. Inspire.",
-  description: "Gardenvale Primary School — Two campuses of excellence in East Brighton, Victoria. Prep to Year 6.",
-  icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23003D5C'/><text x='50' y='60' text-anchor='middle' font-size='50' font-weight='bold' fill='white' font-family='serif'>G</text></svg>",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Wellbeing() {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className="font-sans antialiased">
-        {children}
-      </body>
-    </html>
+    <section style={{backgroundColor:'#f9fafb',padding:'5rem 0'}}>
+      <div style={{maxWidth:'1280px',margin:'0 auto',padding:'0 1.5rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'3rem',alignItems:'center'}}>
+          <div>
+            <p style={{color:'#FF6B35',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'0.5rem'}}>Student Support</p>
+            <h2 style={{color:'#003D5C',fontFamily:'Cormorant Garamond, serif',marginBottom:'1.5rem'}}>Wellbeing at Gardenvale</h2>
+            <p style={{color:'#374151',fontSize:'1.125rem',lineHeight:1.7,marginBottom:'1rem'}}>We believe every student learns best when they feel safe, supported, and valued.</p>
+            <p style={{color:'#374151',lineHeight:1.7,marginBottom:'1.5rem'}}>Through HERRRby and our PERCI dispositions, we create a culture of care and resilience throughout our community.</p>
+            <a href="#" style={{color:'#FF6B35',fontWeight:600,textDecoration:'none'}}>Learn about wellbeing →</a>
+          </div>
+          <div style={{background:'linear-gradient(135deg, #FF6B35, #ff8c5a)',height:'24rem',borderRadius:'8px',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontSize:'1.5rem',fontFamily:'Cormorant Garamond, serif'}}><div style={{textAlign:'center'}}><p style={{fontSize:'3rem',marginBottom:'0.5rem'}}>🌟</p><p>Wellbeing image placeholder</p></div></div>
+        </div>
+      </div>
+    </section>
   );
 }

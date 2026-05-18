@@ -1,60 +1,17 @@
-import React from 'react';
-
-export default function NewsCards() {
-  const news = [
-    {
-      title: 'Year 6 Camp Adventure',
-      excerpt: 'Our Year 6 students returned from an incredible camp experience with new skills, confidence, and lifelong memories.',
-      date: 'May 15, 2024',
-      image: '🏕️',
-    },
-    {
-      title: 'Specialist Programs Showcase',
-      excerpt: 'From visual arts to music and sport, our specialist programs celebrate the unique talents of every student.',
-      date: 'May 10, 2024',
-      image: '🎨',
-    },
-    {
-      title: 'Community Wellbeing Week',
-      excerpt: 'A week dedicated to mental health, resilience, and building connections across our school community.',
-      date: 'May 5, 2024',
-      image: '❤️',
-    },
-  ];
-
+export default function Hero() {
   return (
-    <section className="bg-gray-50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <p className="text-orange text-sm font-semibold uppercase tracking-wider mb-2">Stories From Our Community</p>
-          <h2 className="text-navy mb-4">Latest News</h2>
+    <section style={{paddingTop:'5rem',display:'grid',gridTemplateColumns:'1fr 1fr'}}>
+      <div style={{backgroundColor:'#003D5C',color:'white',padding:'6rem 3rem',display:'flex',flexDirection:'column',justifyContent:'center'}}>
+        <h1 style={{color:'white',marginBottom:'1.5rem',fontFamily:'Cormorant Garamond, serif',fontWeight:700}}>Challenge. Engage. Inspire.</h1>
+        <p style={{color:'#5DCCFF',marginBottom:'0.75rem',fontSize:'1.125rem',fontFamily:'Cormorant Garamond, serif'}}>Gardenvale Primary School</p>
+        <p style={{color:'#f3f4f6',marginBottom:'2rem',lineHeight:1.7,maxWidth:'32rem'}}>Two campuses of excellence, where every learner is challenged to grow, engaged in meaningful learning, and inspired to become their best self.</p>
+        <div style={{display:'flex',gap:'1rem'}}>
+          <button style={{backgroundColor:'#FF6B35',color:'white',padding:'0.75rem 2rem',borderRadius:'4px',border:'none',fontWeight:600,cursor:'pointer'}}>Enrol now</button>
+          <button style={{backgroundColor:'transparent',color:'white',padding:'0.75rem 2rem',borderRadius:'4px',border:'2px solid white',fontWeight:600,cursor:'pointer'}}>Learn more</button>
         </div>
-
-        {/* News Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {news.map((item, idx) => (
-            <article key={idx} className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg hover:border-orange transition">
-              <div className="h-48 bg-gradient-to-br from-navy to-blue-600 flex items-center justify-center text-6xl">
-                {item.image}
-              </div>
-              <div className="p-6">
-                <p className="text-orange text-xs font-semibold uppercase tracking-wider mb-2">{item.date}</p>
-                <h3 className="font-serif text-navy text-xl mb-3">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.excerpt}</p>
-                <a href="#" className="text-orange font-semibold text-sm hover:text-orange-600 transition inline-flex items-center gap-1">
-                  Read more →
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* View All Link */}
-        <div className="text-center">
-          <a href="#" className="text-orange font-semibold hover:text-orange-600 transition inline-flex items-center gap-2">
-            View all news →
-          </a>
-        </div>
+      </div>
+      <div style={{backgroundColor:'#5DCCFF',minHeight:'500px',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontSize:'1.5rem',fontFamily:'Cormorant Garamond, serif'}}>
+        <div style={{textAlign:'center'}}><p style={{fontSize:'3rem',marginBottom:'0.5rem'}}>📷</p><p>Hero image placeholder</p></div>
       </div>
     </section>
   );
