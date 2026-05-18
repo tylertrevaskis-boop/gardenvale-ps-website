@@ -1,28 +1,25 @@
-import React from 'react';
-import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import StatsStrip from '@/components/StatsStrip';
-import HERRRby from '@/components/HERRRby';
-import PERCI from '@/components/PERCI';
-import QuickLinks from '@/components/QuickLinks';
-import NewsCards from '@/components/NewsCards';
-import Learning from '@/components/Learning';
-import Wellbeing from '@/components/Wellbeing';
-import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+import "./globals.css";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Gardenvale Primary School | Challenge. Engage. Inspire.",
+  description: "Gardenvale Primary School — Two campuses of excellence in East Brighton, Victoria. Prep to Year 6.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main className="bg-white">
-      <Navigation />
-      <Hero />
-      <StatsStrip />
-      <HERRRby />
-      <PERCI />
-      <QuickLinks />
-      <NewsCards />
-      <Learning />
-      <Wellbeing />
-      <Footer />
-    </main>
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body>
+        {children}
+      </body>
+    </html>
   );
 }
