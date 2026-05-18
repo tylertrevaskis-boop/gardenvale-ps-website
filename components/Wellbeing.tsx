@@ -7,10 +7,10 @@ export default function Wellbeing() {
             <p style={{color:'#FF6B35',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'0.5rem'}}>Student Support</p>
             <h2 style={{color:'#003D5C',fontFamily:'Cormorant Garamond, serif',marginBottom:'1.5rem'}}>Wellbeing at Gardenvale</h2>
             <p style={{color:'#374151',fontSize:'1.125rem',lineHeight:1.7,marginBottom:'1rem'}}>
-              We know that feeling safe and secure directly impacts a student's capacity to learn. That's why we prioritise social and emotional learning alongside academic achievement.
+              We want students from Gardenvale to be known for being genuine, inclusive and resilient.
             </p>
             <p style={{color:'#374151',lineHeight:1.7,marginBottom:'1.5rem'}}>
-              Our HERRRby values create a culture of mutual respect where inclusion and diversity are celebrated, and every student feels valued, trusted, and ready to grow.
+              Wellbeing at Gardenvale is multifaceted — spanning Respectful Relationships, student voice and agency, and positive behaviour strategies. At the heart of it all are our HERRRby values, the foundation that everything else is built upon.
             </p>
             <a href="#" style={{color:'#FF6B35',fontWeight:600,textDecoration:'none'}}>Learn about wellbeing →</a>
           </div>
