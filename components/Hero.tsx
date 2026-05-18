@@ -62,7 +62,7 @@ export default function Hero() {
       <div style={{position:'absolute',inset:0,backgroundColor:'rgba(0,61,92,0.55)'}} />
       <div style={{position:'relative',zIndex:1,height:'100%',display:'flex',flexDirection:'column',justifyContent:'center',padding:'0 4rem',maxWidth:'56rem'}}>
         <p style={{color:'#5DCCFF',marginBottom:'1rem',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em'}}>Gardenvale Primary School</p>
-        <h1 style={{color:'white',marginBottom:'2rem',fontFamily:'Cormorant Garamond, serif',fontWeight:700,fontSize:'3.5rem',lineHeight:1.15}}>At Gardenvale, we are helping grow genuine, inclusive and resilient learners.</h1>
+        <h1 style={{color:'white',marginBottom:'2rem',fontFamily:'Cormorant Garamond, serif',fontWeight:700,fontSize:'3.5rem',lineHeight:1.15}}>At Gardenvale, we're growing genuine, inclusive and resilient learners.</h1>
         <div style={{display:'flex',gap:'1rem'}}>
           <button style={{backgroundColor:'#FF6B35',color:'white',padding:'0.75rem 2rem',borderRadius:'4px',border:'none',fontWeight:600,cursor:'pointer',fontSize:'1rem'}}>Enrol now</button>
           <button style={{backgroundColor:'transparent',color:'white',padding:'0.75rem 2rem',borderRadius:'4px',border:'2px solid white',fontWeight:600,cursor:'pointer',fontSize:'1rem'}}>Explore our approach</button>
