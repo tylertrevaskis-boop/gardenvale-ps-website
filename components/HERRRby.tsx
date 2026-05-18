@@ -22,7 +22,7 @@ export default function HERRRby() {
             <img src="/images/HERRRbyNoBG.png" alt="HERRRby the starfish mascot" style={{height:'160px',width:'auto',objectFit:'contain'}} />
           </div>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'1.5rem'}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'1.5rem'}}>
           {values.map((v,i) => (
             <div key={i} style={{backgroundColor:'rgba(255,255,255,0.1)',borderRadius:'8px',padding:'1.5rem',border:'1px solid rgba(93,204,255,0.3)'}}>
               <h3 style={{color:'white',fontFamily:'Cormorant Garamond, serif',fontSize:'1.5rem',marginBottom:'0.5rem'}}>{v.title}</h3>
