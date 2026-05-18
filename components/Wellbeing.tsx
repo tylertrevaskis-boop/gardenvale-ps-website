@@ -10,7 +10,9 @@ export default function Wellbeing() {
             <p style={{color:'#374151',lineHeight:1.7,marginBottom:'1.5rem'}}>Through HERRRby and our PERCI dispositions, we create a culture of care and resilience throughout our community.</p>
             <a href="#" style={{color:'#FF6B35',fontWeight:600,textDecoration:'none'}}>Learn about wellbeing →</a>
           </div>
-          <div style={{background:'linear-gradient(135deg, #FF6B35, #ff8c5a)',height:'24rem',borderRadius:'8px',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontSize:'1.5rem',fontFamily:'Cormorant Garamond, serif'}}><div style={{textAlign:'center'}}><p style={{fontSize:'3rem',marginBottom:'0.5rem'}}>🌟</p><p>Wellbeing image placeholder</p></div></div>
+          <div style={{display:'flex',alignItems:'center',justifyContent:'center',backgroundColor:'#fff7f4',borderRadius:'16px',padding:'2rem',minHeight:'24rem'}}>
+            <img src="/images/HERRRbyNoBG.png" alt="HERRRby the starfish mascot" style={{maxHeight:'320px',width:'auto',objectFit:'contain'}} />
+          </div>
         </div>
       </div>
     </section>
