@@ -10,8 +10,7 @@ export default function Hero() {
           <button style={{backgroundColor:'transparent',color:'white',padding:'0.75rem 2rem',borderRadius:'4px',border:'2px solid white',fontWeight:600,cursor:'pointer'}}>Learn more</button>
         </div>
       </div>
-      <div style={{backgroundColor:'#5DCCFF',minHeight:'500px',display:'flex',alignItems:'center',justifyContent:'center',color:'white',fontSize:'1.5rem',fontFamily:'Cormorant Garamond, serif'}}>
-        <div style={{textAlign:'center'}}><p style={{fontSize:'3rem',marginBottom:'0.5rem'}}>📷</p><p>Hero image placeholder</p></div>
+      <div style={{backgroundImage:'url(/images/hero.jpg)',backgroundSize:'cover',backgroundPosition:'center',minHeight:'500px'}}>
       </div>
     </section>
   );
