@@ -12,14 +12,21 @@ const media = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  const [fading, setFading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const goNext = () => {
+    setFading(true);
+    setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % media.length);
+      setFading(false);
+    }, 800);
+  };
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | null = null;
     if (media[current].type === 'image') {
-      timer = setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % media.length);
-      }, 4000);
+      timer = setTimeout(goNext, 6000);
     }
     return () => {
       if (timer) clearTimeout(timer);
@@ -33,27 +40,25 @@ export default function Hero() {
     }
   }, [current]);
 
-  const handleVideoEnd = () => {
-    setCurrent((prev) => (prev + 1) % media.length);
-  };
-
   const item = media[current];
 
   return (
     <section style={{paddingTop:'5rem',position:'relative',height:'calc(100vh - 5rem)',overflow:'hidden'}}>
-      {item.type === 'video' ? (
-        <video
-          ref={videoRef}
-          onEnded={handleVideoEnd}
-          muted
-          playsInline
-          style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}
-        >
-          <source src={item.src} type="video/mp4" />
-        </video>
-      ) : (
-        <div style={{position:'absolute',inset:0,backgroundImage:`url(${item.src})`,backgroundSize:'cover',backgroundPosition:'center'}} />
-      )}
+      <div style={{position:'absolute',inset:0,opacity:fading?0:1,transition:'opacity 0.8s ease-in-out'}}>
+        {item.type === 'video' ? (
+          <video
+            ref={videoRef}
+            onEnded={goNext}
+            muted
+            playsInline
+            style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}
+          >
+            <source src={item.src} type="video/mp4" />
+          </video>
+        ) : (
+          <div style={{position:'absolute',inset:0,backgroundImage:`url(${item.src})`,backgroundSize:'cover',backgroundPosition:'center'}} />
+        )}
+      </div>
       <div style={{position:'absolute',inset:0,backgroundColor:'rgba(0,61,92,0.55)'}} />
       <div style={{position:'relative',zIndex:1,height:'100%',display:'flex',flexDirection:'column',justifyContent:'center',padding:'0 4rem',maxWidth:'56rem'}}>
         <p style={{color:'#5DCCFF',marginBottom:'1rem',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em'}}>Gardenvale Primary School</p>
