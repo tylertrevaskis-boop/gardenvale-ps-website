@@ -9,8 +9,14 @@ export default function HERRRby() {
   ];
   return (
     <section style={{backgroundColor:'#003D5C',padding:'5rem 0'}}>
+      <style>{`
+        .herrrby-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        @media (max-width: 768px) { .herrrby-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .herrrby-grid { grid-template-columns: 1fr; } }
+        .herrrby-header { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 3rem; }
+      `}</style>
       <div style={{maxWidth:'1280px',margin:'0 auto',padding:'0 1.5rem'}}>
-        <div style={{display:'flex',flexWrap:'wrap',gap:'2rem',alignItems:'center',marginBottom:'3rem'}}>
+        <div className="herrrby-header">
           <div style={{flex:'1',minWidth:'280px'}}>
             <p style={{color:'#5DCCFF',fontSize:'0.875rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em',marginBottom:'0.5rem'}}>Our Foundation</p>
             <h2 style={{color:'white',fontFamily:'Cormorant Garamond, serif',marginBottom:'1rem'}}>HERRRby</h2>
@@ -22,7 +28,7 @@ export default function HERRRby() {
             <img src="/images/HERRRbyNoBG.png" alt="HERRRby the starfish mascot" style={{height:'160px',width:'auto',objectFit:'contain'}} />
           </div>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'1.5rem'}}>
+        <div className="herrrby-grid">
           {values.map((v,i) => (
             <div key={i} style={{backgroundColor:'rgba(255,255,255,0.1)',borderRadius:'8px',padding:'1.5rem',border:'1px solid rgba(93,204,255,0.3)'}}>
               <h3 style={{color:'white',fontFamily:'Cormorant Garamond, serif',fontSize:'1.5rem',marginBottom:'0.5rem'}}>{v.title}</h3>
