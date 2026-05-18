@@ -15,17 +15,16 @@ export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | null = null;
     if (media[current].type === 'image') {
-      const timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setCurrent((prev) => (prev + 1) % media.length);
       }, 4000);
-      return () => clearTimeout(timer);
     }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, [current]);
-
-  const handleVideoEnd = () => {
-    setCurrent((prev) => (prev + 1) % media.length);
-  };
 
   useEffect(() => {
     if (media[current].type === 'video' && videoRef.current) {
@@ -33,6 +32,10 @@ export default function Hero() {
       videoRef.current.play();
     }
   }, [current]);
+
+  const handleVideoEnd = () => {
+    setCurrent((prev) => (prev + 1) % media.length);
+  };
 
   const item = media[current];
 
